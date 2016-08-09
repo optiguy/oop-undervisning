@@ -19,7 +19,7 @@ namespace Optiguy
         public int Id { get { return this.id; } set { this.id = value; } }
         public string Name { get { return this.name; } set { this.name = value; } }
         public decimal Price { get { return this.price; } set { this.price = value; } }
-        public int Amount { get { return this.id; } set { this.id = value; } }
+        public int Amount { get { return this.amount; } set { this.amount = value; } }
         public decimal TotalPrice { get { return this.totalPrice; } set { this.totalPrice = value; } }
         #endregion
 
@@ -30,6 +30,7 @@ namespace Optiguy
             this.name = name;
             this.price = price;
             this.amount = amount;
+            this.totalPrice = this.price * this.amount;
         }
 
         #endregion
