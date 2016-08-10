@@ -35,7 +35,7 @@
                     <asp:Button ID="Btn_submit" runat="server" Text="Put i kurv" OnClick="Button_submit_Click" /></td>
             </tr>
         </table>
-
+        <h1>Indkøbskurv</h1>
         <asp:GridView ID="GV_cart" runat="server"></asp:GridView>
     </div>
     </form>
