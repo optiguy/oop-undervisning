@@ -29,7 +29,7 @@ namespace Optiguy
             return cart;
         }
 
-        private void AddToCart(int id, string name, decimal price, int amount)
+        public void AddToCart(int id, string name, decimal price, int amount)
         {
             bool newProduct = true;
 
