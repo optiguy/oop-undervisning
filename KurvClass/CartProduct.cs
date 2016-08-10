@@ -23,6 +23,8 @@ namespace Optiguy
         #endregion
 
         #region constructors
+
+        public CartProduct(){}
         public CartProduct(int id, string name, decimal price, int amount) {
             this.id = id;
             this.name = name;

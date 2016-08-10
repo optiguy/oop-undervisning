@@ -31,21 +31,40 @@ namespace Optiguy
 
         public void AddToCart(int id, string name, decimal price, int amount)
         {
-            bool newProduct = true;
+            CartProduct product = findProduct(id);
+            if (product.Id != 0)
+            {
+                product.Amount += amount;
+            } else {
+                this.items.Add(new CartProduct(id,name,price,amount));
+            }
+        }
 
+        public void SetAmountOnProduct(int id, int newAmount) {
+            CartProduct item = findProduct(id);
+            item.Amount = newAmount;
+        }
+
+        public void addAmountOnProduct(int id, int amountToAdd) {
+            CartProduct item = findProduct(id);
+            item.Amount += amountToAdd;
+        }
+        public void reduceAmountOnProduct(int id, int amountToReduce) {
+            CartProduct item = findProduct(id);
+            item.Amount -= amountToReduce;
+        }
+
+        public CartProduct findProduct(int id)
+        {
             foreach (CartProduct product in this.items)
             {
                 if (product.Id == id)
                 {
-                    newProduct = false;
-                    product.Amount += amount;
+                    return product;
                 }
             }
 
-            if (newProduct)
-            {
-                this.items.Add(new CartProduct(id,name,price,amount));
-            }
+            return new CartProduct();
         }
     }
 }
