@@ -29,29 +29,50 @@ namespace Optiguy
             return cart;
         }
 
-        public void AddToCart(int id, string name, decimal price, int amount)
+        public void AddToCart(int id, string name, decimal price, int amount, string image)
         {
             CartProduct product = findProduct(id);
             if (product.Id != 0)
             {
                 product.Amount += amount;
             } else {
-                this.items.Add(new CartProduct(id,name,price,amount));
+                this.items.Add(new CartProduct(id,name,price,amount, image));
             }
         }
 
-        public void SetAmountOnProduct(int id, int newAmount) {
+        public void SetAmountOnProduct(int id, int newAmount)
+        {
             CartProduct item = findProduct(id);
             item.Amount = newAmount;
         }
 
-        public void addAmountOnProduct(int id, int amountToAdd) {
+        public void addAmountOnProduct(int id, int amountToAdd)
+        {
             CartProduct item = findProduct(id);
             item.Amount += amountToAdd;
         }
-        public void reduceAmountOnProduct(int id, int amountToReduce) {
+        public void reduceAmountOnProduct(int id, int amountToReduce)
+        {
             CartProduct item = findProduct(id);
             item.Amount -= amountToReduce;
+        }
+
+        public void removeProduct(int id)
+        {
+            CartProduct item = findProduct(id);
+            if (item.Id != 0)
+            {
+                this.items.Remove(item);
+            }
+        }
+
+        public void removeAllProducts()
+        {
+            if (HttpContext.Current.Session["Cart"] != null)
+            {
+                HttpContext.Current.Session.Remove("Cart");
+            }
+            this.items = new List<CartProduct>();
         }
 
         public CartProduct findProduct(int id)

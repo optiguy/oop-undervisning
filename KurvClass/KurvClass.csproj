@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CartView.ascx" />
     <Content Include="ClassDiagram1.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -72,6 +73,13 @@
   <ItemGroup>
     <Compile Include="Cart.cs" />
     <Compile Include="CartProduct.cs" />
+    <Compile Include="CartView.ascx.cs">
+      <DependentUpon>CartView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CartView.ascx.designer.cs">
+      <DependentUpon>CartView.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
