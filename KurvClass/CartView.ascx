@@ -20,9 +20,9 @@
                 <td><%# Eval("Name") %></td>
                 <td><%# Eval("Price") %></td>
                 <td>
-                    <asp:Button ID="Btn_minus" CommandName="minus" CommandArgument='<%# Eval("Id") %>' runat="server" Text="-" />
+                    <asp:LinkButton ID="Btn_minus" CommandName="minus" CommandArgument='<%# Eval("Id") %>' runat="server">-</asp:LinkButton>
                     <%# Eval("Amount") %>
-                    <asp:Button ID="Btn_plus" CommandName="plus" CommandArgument='<%# Eval("Id") %>' runat="server" Text="+" />
+                    <asp:LinkButton ID="Btn_plus" CommandName="plus" CommandArgument='<%# Eval("Id") %>' runat="server">+</asp:LinkButton>
                 </td>
                 <td><%# Eval("TotalPrice") %></td>
                 <td>Moms udgør <%# Eval("Vat") %></td>

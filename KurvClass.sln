@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KurvClass", "KurvClass\Kurv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserClass", "UserClass\UserClass.csproj", "{208D5EFE-E094-44AD-8A0C-8A64F4D06E95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordre", "Ordre\Ordre.csproj", "{F2DBC153-7180-4BF2-98E9-F2B807769339}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdreClass", "Ordre\OrdreClass.csproj", "{F2DBC153-7180-4BF2-98E9-F2B807769339}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

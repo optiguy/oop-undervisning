@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Optiguy
+namespace KurvClass
 {
     public class Cart
     {
         private List<CartProduct> items; //This is all the items in the cart
 
+        
         public Cart()
         {
             this.items = GrabCart();
@@ -17,6 +18,8 @@ namespace Optiguy
         public List<CartProduct> Items { get { return this.items; } }
 
         private List<CartProduct> GrabCart()
+        
+        
         {
             List<CartProduct> cart = new List<CartProduct>();
             

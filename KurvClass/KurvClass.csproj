@@ -58,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CartView.ascx" />
-    <Content Include="ClassDiagram1.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
